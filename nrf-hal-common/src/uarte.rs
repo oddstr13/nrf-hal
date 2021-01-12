@@ -553,7 +553,7 @@ where
             self.written += 1;
             Ok(())
         } else {
-            Err(nb::Error::WouldBlock)
+            self.flush()
         }
     }
 
